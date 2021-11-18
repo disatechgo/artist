@@ -1,0 +1,332 @@
+
+#botticelli {
+  $tipo_base: 'Nunito';
+  $tipo_H1: 'Chalk';
+// ----------- NAV ----------
+@mixin animasocial {
+  display: block !important;
+  font-size: 0.6rem !important;
+  font-family: $tipo_base;
+  font-weight: 400;
+  color: #fff !important;
+  padding: 2px 4px !important;
+  border-radius: 2px;
+  animation: mover 1s infinite  alternate;
+  @-webkit-keyframes mover {
+      0% { transform: translateY(-40px); }
+      100% { transform: translateY(-35px); }
+  }
+  @keyframes mover {
+      0% { transform: translateY(-35px); }
+      100% { transform: translateY(-40px); }
+  }
+}
+
+& body {
+  background-image: url("../img/artist-boticcelli.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+& .viewport-header {
+  
+  height: 10vh;
+  /* Hide Hamburger */
+  & #hamnav label, #hamburger { display: none; }
+  /* Horizontal Menu Items */
+  & #hamitems { 
+      display: flex; 
+      justify-content: flex-end;
+      padding: 30px 20px 10px 0;
+
+      & .social {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+      }
+      & .link {
+        display: none;
+        position: absolute;
+      }
+      & .fa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        font-size: 1.1rem;
+        width: 40px;
+        height: 40px;
+        //border-radius: 350px;
+        text-align: center;
+        text-decoration: none;
+        //margin: 5px 2px;
+        opacity: 0.7;
+        color: white;
+        &:hover {
+          opacity: 1;
+          font-size: 1.3rem;
+        }
+      }
+      } 
+      & .fa-behance {
+          background: #0057ff;
+          &:hover + .link {
+            background: #0057ff;
+            @include animasocial;
+            position: relative;
+          }
+      }
+      & .fa-github {
+        background: #333;
+        &:hover + .link {
+          background: #333;;
+          @include animasocial;
+        }
+      }
+      & .fa-linkedin {
+        background: #0072b1;
+        &:hover + .link {
+          background: #0072b1;;
+          @include animasocial;
+        }
+      }
+      & .fa-facebook {
+            background: #3B5998;
+            &:hover + .link {
+              background: #3B5998;;
+              @include animasocial;
+            }
+          }
+      & .fa-instagram {
+          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+          &:hover + .link {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            @include animasocial;
+          }
+      }
+
+  /* [ON SMALL SCREENS] */
+  @media screen and (max-width: 768px){
+    /* Show Hamburger Icon */
+    #hamnav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      
+      & label { 
+        display: inline-block; 
+        color: white;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+
+      /* Break down menu items into vertical */
+      & a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid rgb(10, 10, 10);
+      }
+
+      /* Toggle Show/Hide Menu */
+      & #hamitems { 
+        display: none; 
+        padding-bottom: 10px;
+        & .social {
+          width: 100%;
+        }
+        & .fa {
+          width: 55px;
+          margin: 10px 0;
+        }
+      }
+      & input:checked ~ #hamitems { 
+        display: block; 
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+    }
+  }
+}
+//------------------- Fin nav ------------------------
+
+
+
+
+
+
+
+
+// ------------------- H1 ---------------------------
+& .viewport-main {
+  position: relative;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & h1 {
+    font-family: $tipo_H1;
+    color: white;
+    line-height: 1.2;
+    font-size: 5rem;
+    text-align: center;
+    width: 80%;
+    
+  }  
+}
+// ------------------- Fin H1 ---------------------------
+
+
+// ------------------- Animación ---------------------------
+  .animate span {
+	display: inline-block;
+	font-size: 6.4rem;
+	opacity: 0;
+	transform: translate(200px, -100px) scale(2);
+	animation: ballDrop .7s forwards;
+  }
+  
+  .animate span:nth-of-type(2) {
+	animation-delay: .05s;
+  }
+  .animate span:nth-of-type(3) {
+	animation-delay: .1s;
+  }
+  .animate span:nth-of-type(4) {
+	animation-delay: .15s;
+  }
+  .animate span:nth-of-type(5) {
+	animation-delay: .2s;
+  }
+  .animate span:nth-of-type(6) {
+	animation-delay: .25s;
+  }
+  .animate span:nth-of-type(7) {
+	animation-delay: .3s;
+  }
+  .animate span:nth-of-type(8) {
+	animation-delay: .35s;
+  }
+  .animate span:nth-of-type(9) {
+	animation-delay: .4s;
+  }
+  .animate span:nth-of-type(10) {
+	animation-delay: .45s;
+  }
+  .animate span:nth-of-type(11) {
+	animation-delay: .5s;
+  }
+  .animate span:nth-of-type(12) {
+	animation-delay: .55s;
+  }
+  .animate span:nth-of-type(13) {
+	animation-delay: .6s;
+  }
+  .animate span:nth-of-type(14) {
+	animation-delay: .65s;
+  }
+  .animate span:nth-of-type(15) {
+	animation-delay: .7s;
+  }
+  .animate span:nth-of-type(16) {
+	animation-delay: .75s;
+  }
+  .animate span:nth-of-type(17) {
+	animation-delay: .8s;
+  }
+  .animate span:nth-of-type(18) {
+	animation-delay: .85s;
+  }
+  .animate span:nth-of-type(19) {
+	animation-delay: .9s;
+  }
+  .animate span:nth-of-type(20) {
+	animation-delay: .95s;
+  }
+    
+
+  @keyframes ballDrop {
+	60% {
+	  transform: translate(0, 20px) rotate(-180deg) scale(.5);
+	}
+  
+	100% {
+	  transform: translate(0) rotate(0deg) scale(1);
+	  opacity: 1;
+	}
+  }
+
+  @media screen and (max-width: 768px) {
+	.animate span {
+		font-size: 3rem;
+	}
+  }
+  // ------------------- Fin Animación ---------------------------
+
+
+
+
+
+
+
+
+
+// ------------------- BUTTON ------------------
+
+
+//base styles
+.btn {
+  position: relative;
+  bottom: -5%;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #f7f7f7;
+  font-family: 'Nunito';
+  font-size: 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 12px 22px;
+  transition: all .2s; 
+  &:hover {     
+    color: #17191a;
+    background: #f7f7f7;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+// ------------------- Fin BUTTON ------------------
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
