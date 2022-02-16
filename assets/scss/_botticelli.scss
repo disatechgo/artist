@@ -1,7 +1,7 @@
 
 #botticelli {
   $tipo_base: 'Nunito';
-  $tipo_H1: 'Chalk';
+  $tipo_H1: 'BillionDreams';
 // ----------- NAV ----------
 @mixin animasocial {
   display: block !important;
@@ -186,12 +186,19 @@
   }  
 }
 // ------------------- Fin H1 ---------------------------
+.name-title {
+  width: 6vw;
+  display: flex;
+}
 
+img {
+  //width: 7vw;
+}
 
 // ------------------- Animación ---------------------------
   .animate span {
 	display: inline-block;
-	font-size: 6.4rem;
+	font-size: 12.5rem;
 	opacity: 0;
 	transform: translate(200px, -100px) scale(2);
 	animation: ballDrop .7s forwards;
@@ -269,7 +276,7 @@
 
   @media screen and (max-width: 768px) {
 	.animate span {
-		font-size: 3rem;
+		font-size: 5rem;
 	}
   }
   // ------------------- Fin Animación ---------------------------
@@ -288,10 +295,11 @@
 //base styles
 .btn {
   position: relative;
+  display: flex;
+  align-items: center;
   bottom: -5%;
   color: #fff;
   text-decoration: none;
-  display: inline-block;
   border: 2px solid #f7f7f7;
   font-family: 'Nunito';
   font-size: 1rem;
@@ -303,6 +311,14 @@
   &:hover {     
     color: #17191a;
     background: #f7f7f7;
+    & i {
+      color: rgb(255, 0, 0);
+    } 
+  }
+  & i {
+    font-size: 1.8rem;
+    margin-left: 10px;
+
   }
 }
 

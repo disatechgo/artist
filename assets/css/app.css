@@ -10797,6 +10797,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @font-face {
+  font-family: 'BillionDreams';
+  src: url(../fonts/BillionDreams.ttf) format("truetype");
+}
+
+@font-face {
   font-family: 'OpenSans';
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 }
@@ -11965,7 +11970,7 @@ video {
 }
 
 #botticelli .viewport-main h1 {
-  font-family: "Chalk";
+  font-family: "BillionDreams";
   color: white;
   line-height: 1.2;
   font-size: 5rem;
@@ -11973,9 +11978,16 @@ video {
   width: 80%;
 }
 
+#botticelli .name-title {
+  width: 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #botticelli .animate span {
   display: inline-block;
-  font-size: 6.4rem;
+  font-size: 12.5rem;
   opacity: 0;
   -webkit-transform: translate(200px, -100px) scale(2);
           transform: translate(200px, -100px) scale(2);
@@ -12092,16 +12104,21 @@ video {
 
 @media screen and (max-width: 768px) {
   #botticelli .animate span {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
 
 #botticelli .btn {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: -5%;
   color: #fff;
   text-decoration: none;
-  display: inline-block;
   border: 2px solid #f7f7f7;
   font-family: 'Nunito';
   font-size: 1rem;
@@ -12116,6 +12133,15 @@ video {
 #botticelli .btn:hover {
   color: #17191a;
   background: #f7f7f7;
+}
+
+#botticelli .btn:hover i {
+  color: red;
+}
+
+#botticelli .btn i {
+  font-size: 1.8rem;
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 768px) {
